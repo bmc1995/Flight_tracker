@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/Flight_tracker/static/css/main.5ecd60fb.chunk.css",
+    "main.js": "/Flight_tracker/static/js/main.0a33276f.chunk.js",
+    "main.js.map": "/Flight_tracker/static/js/main.0a33276f.chunk.js.map",
+    "runtime-main.js": "/Flight_tracker/static/js/runtime-main.46be075e.js",
+    "runtime-main.js.map": "/Flight_tracker/static/js/runtime-main.46be075e.js.map",
+    "static/js/2.2b2f537b.chunk.js": "/Flight_tracker/static/js/2.2b2f537b.chunk.js",
+    "static/js/2.2b2f537b.chunk.js.map": "/Flight_tracker/static/js/2.2b2f537b.chunk.js.map",
+    "index.html": "/Flight_tracker/index.html",
+    "precache-manifest.66588344c87dbd290d50d1db514f8612.js": "/Flight_tracker/precache-manifest.66588344c87dbd290d50d1db514f8612.js",
+    "service-worker.js": "/Flight_tracker/service-worker.js",
+    "static/css/main.5ecd60fb.chunk.css.map": "/Flight_tracker/static/css/main.5ecd60fb.chunk.css.map",
+    "static/js/2.2b2f537b.chunk.js.LICENSE.txt": "/Flight_tracker/static/js/2.2b2f537b.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.46be075e.js",
+    "static/js/2.2b2f537b.chunk.js",
+    "static/css/main.5ecd60fb.chunk.css",
+    "static/js/main.0a33276f.chunk.js"
+  ]
+}
