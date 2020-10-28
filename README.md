@@ -4,13 +4,9 @@ A flight tracker utilizing the [Aviationstack API](https://aviationstack.com/). 
 
 ## Motivation
 
----
-
 I started this project to learn more about [Chakra UI](https://chakra-ui.com/) as well as to become more familiar with integrating the Google Maps API in a React application. The ability to track an airplane moving hundreds of miles an hour is amazing to me, so I used Aviationstack to fetch flight data and display it on screen.
 
 ## Features
-
----
 
 ### Search Bar
 
@@ -62,8 +58,6 @@ The more info component contains live information about the aircraft's location,
 > The more info component is only rendered if Aviationstack's response contains live data. Unfortunately, the API has not been returning live data lately.
 
 ## Technologies Used
-
----
 
 - HTML/CSS
 - JavaScript
