@@ -7,7 +7,13 @@ import MapComponent from "../Map";
 
 const InfoBox = (props) => {
   return (
-    <Box margin="auto" maxWidth="4xl" border="1px solid black">
+    <Box
+      margin="auto"
+      marginTop={5}
+      maxWidth="4xl"
+      border={{ xs: "1px solid black", md: "5px solid black" }}
+      borderRadius={{ md: 3 }}
+    >
       <Box>
         <StatusBar response={props.response} />
       </Box>

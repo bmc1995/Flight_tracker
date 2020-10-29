@@ -6,20 +6,32 @@ import {
   FormHelperText,
   Button,
   Box,
+  useToast,
 } from "@chakra-ui/core";
 
 const SearchBar = (props) => {
   // const [invalid, setInvalid] = useState(true);
   const [value, setValue] = useState("");
   const [isLoading, setIsloading] = useState(false);
+  const toast = useToast();
 
   const handleChange = (e) => {
     setValue(e.target.value);
   };
 
   const handleSubmit = async (value) => {
+    if (!value.match(/^[A-Z]{2}\d{3,4}$/gi)) {
+      toast({
+        title: "Invalid flight designator",
+        description: "Please enter a valid flight designator",
+        status: "warning",
+        duration: 5000,
+        isClosable: true,
+      });
+      return null;
+    }
+
     setIsloading(true);
-    console.log(value);
 
     const response = await fetch(
       `https://cors-anywhere.herokuapp.com/http://api.aviationstack.com/v1/flights?access_key=3ffefb67dcd0e291d5562eb4234186a9&flight_iata=${value}`,
@@ -30,21 +42,32 @@ const SearchBar = (props) => {
     );
     await response
       .json()
-      .then((data) => {
-        console.log(data);
-        props.setResponse(data);
-        setIsloading(false);
+      .then((res) => {
+        if (res.data[0] !== undefined) {
+          console.log(res);
+          props.setResponse(res);
+        } else {
+          toast({
+            title: "Flight not found.",
+            description: "We can't seem to find that flight.",
+            status: "error",
+            duration: 5000,
+            isClosable: true,
+          });
+        }
       })
       .catch((err) => {
         console.error(err);
+      })
+      .finally(() => {
         setIsloading(false);
       });
   };
 
   return (
-    <Box maxW="4xl" marginX="auto">
+    <Box mt={5} maxW="4xl" marginX="auto">
       <form onSubmit={(e) => e.preventDefault()}>
-        <FormControl>
+        <FormControl marginX={3}>
           <FormLabel htmlFor="FindFlight">Find Flight</FormLabel>
           <Input
             id="FindFlight"
@@ -58,7 +81,12 @@ const SearchBar = (props) => {
             e.g. DL1234 for Delta Airlines flight 1234
           </FormHelperText>
         </FormControl>
-        <Button isLoading={isLoading} onClick={() => handleSubmit(value)}>
+        <Button
+          mt={3}
+          marginLeft={3}
+          isLoading={isLoading}
+          onClick={() => handleSubmit(value)}
+        >
           Search
         </Button>
       </form>

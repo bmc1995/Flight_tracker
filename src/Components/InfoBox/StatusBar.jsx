@@ -40,6 +40,11 @@ const statusBoxGenerator = (value) => {
       statusBox.bgColor = "yellow.400";
       statusBox.textColor = "black";
       break;
+    default: {
+      statusBox.heading = "Airborne";
+      statusBox.bgColor = "green.400";
+      statusBox.textColor = "white";
+    }
   }
 
   return (

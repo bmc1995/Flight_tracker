@@ -3,7 +3,7 @@ import { GoogleMap, LoadScript, Marker } from "@react-google-maps/api";
 
 const MapComponent = (props) => {
   const [position, setPosition] = useState(undefined);
-  const [center, setCenter] = useState();
+  // const [center, setCenter] = useState();
 
   useEffect(() => {
     props.response.live

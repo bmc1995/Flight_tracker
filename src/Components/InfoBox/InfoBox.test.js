@@ -113,7 +113,9 @@ describe("InfoBox displays data", () => {
   });
   test("should show departure time", () => {
     const { container } = render(<InfoBox response={mockResponse.data[0]} />);
-    expect(container).toHaveTextContent(/Scheduled2019-12-12T04:20:00\+00:00/);
+    expect(container).toHaveTextContent(
+      /ScheduledDecember 11, 2019, 8:20 PM PST/
+    );
   });
   test("should show departure airport", () => {
     const { container } = render(<InfoBox response={mockResponse.data[0]} />);
@@ -129,6 +131,8 @@ describe("InfoBox displays data", () => {
   });
   test("should show arrival time", () => {
     const { container } = render(<InfoBox response={mockResponse.data[0]} />);
-    expect(container).toHaveTextContent(/Scheduled2019-12-12T04:20:00\+00:00/);
+    expect(container).toHaveTextContent(
+      /ScheduledDecember 11, 2019, 10:20 PM CST/
+    );
   });
 });
