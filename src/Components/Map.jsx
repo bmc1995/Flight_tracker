@@ -1,6 +1,11 @@
 import React, { useState, useEffect } from "react";
 import { GoogleMap, LoadScript, Marker } from "@react-google-maps/api";
 
+/*The API hasn't been returning live data lately.
+When testing with react devtools, it will
+change the marker to the correct position without
+requesting a new map. */
+
 const MapComponent = (props) => {
   const [position, setPosition] = useState(undefined);
   // const [center, setCenter] = useState();

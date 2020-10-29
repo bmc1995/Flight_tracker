@@ -10,7 +10,7 @@ I started this project to learn more about [Chakra UI](https://chakra-ui.com/) a
 
 ### Search Bar
 
-The search bar accepts a 6 character flight designator consisting of the airline's [IATA code](https://en.wikipedia.org/wiki/Airline_codes#IATA_airline_designator) and flight number. This is usually included in booking information and also found on boarding passes.
+The search bar accepts a 5 to 6 character flight designator consisting of the airline's [IATA code](https://en.wikipedia.org/wiki/Airline_codes#IATA_airline_designator) and flight number. This is usually included in booking information and also found on boarding passes.
 
 > i.e. **DL1234** _(Delta Airlines flight 1234)_
 
@@ -60,3 +60,12 @@ The Flight Information box consists of 4 components:
 - API's
   - [Google Maps](https://developers.google.com/maps/documentation/javascript/overview)
   - [Aviationstack](https://aviationstack.com/documentation)
+
+## Development
+
+- Installation
+  1. Download the repository
+  2. Run `npm install`
+  3. Code
+  4. Test your changes
+  5. Submit a PR!

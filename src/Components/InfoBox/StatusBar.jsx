@@ -41,8 +41,8 @@ const statusBoxGenerator = (value) => {
       statusBox.textColor = "black";
       break;
     default: {
-      statusBox.heading = "Airborne";
-      statusBox.bgColor = "green.400";
+      statusBox.heading = "wee!";
+      statusBox.bgColor = "black";
       statusBox.textColor = "white";
     }
   }

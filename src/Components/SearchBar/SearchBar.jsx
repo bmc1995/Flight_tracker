@@ -10,7 +10,6 @@ import {
 } from "@chakra-ui/core";
 
 const SearchBar = (props) => {
-  // const [invalid, setInvalid] = useState(true);
   const [value, setValue] = useState("");
   const [isLoading, setIsloading] = useState(false);
   const toast = useToast();
@@ -19,20 +18,20 @@ const SearchBar = (props) => {
     setValue(e.target.value);
   };
 
+  // if value doesnt match 2 A-Z and 3-4 number chars, return a toast.
   const handleSubmit = async (value) => {
     if (!value.match(/^[A-Z]{2}\d{3,4}$/gi)) {
-      toast({
+      return toast({
         title: "Invalid flight designator",
         description: "Please enter a valid flight designator",
         status: "warning",
         duration: 5000,
         isClosable: true,
       });
-      return null;
     }
 
     setIsloading(true);
-
+    //Free API doesn't support https.
     const response = await fetch(
       `https://cors-anywhere.herokuapp.com/http://api.aviationstack.com/v1/flights?access_key=3ffefb67dcd0e291d5562eb4234186a9&flight_iata=${value}`,
       {

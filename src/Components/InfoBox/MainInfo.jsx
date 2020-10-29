@@ -4,6 +4,14 @@ import { FaPlaneArrival, FaPlaneDeparture } from "react-icons/fa";
 import { DateTime } from "luxon";
 
 const TimingInfo = (props) => {
+  /* 
+  Aviationstack returns the correct departure and arrival times except the offset is always 00:00.
+  It does contain the correct timezone (e.x. America/New_York).
+  Luxon will take this and apply the offset a second time.
+  To work around this with luxon:
+  1. Get the offset out of the incorrect time
+  2. return a DateTime with the offset added or subtracted
+*/
   const convertTime = (time) => {
     if (!time) {
       return "--";
@@ -18,8 +26,6 @@ const TimingInfo = (props) => {
       .minus({ hours: offset })
       .toFormat("fff");
   };
-
-  //because the api is meh, i need to get the iso time, get the timezone, then subtract the timezone from the original time before trying to parse it with luxon
 
   return (
     <Box margin="auto">
