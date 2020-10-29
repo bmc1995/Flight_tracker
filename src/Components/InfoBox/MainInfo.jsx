@@ -8,10 +8,18 @@ const TimingInfo = (props) => {
     if (!time) {
       return "--";
     }
+
+    let offset = DateTime.fromISO(time)
+      .setZone(props.response.timezone)
+      .toFormat("Z");
+
     return DateTime.fromISO(time)
       .setZone(props.response.timezone)
+      .minus({ hours: offset })
       .toFormat("fff");
   };
+
+  //because the api is meh, i need to get the iso time, get the timezone, then subtract the timezone from the original time before trying to parse it with luxon
 
   return (
     <Box margin="auto">
