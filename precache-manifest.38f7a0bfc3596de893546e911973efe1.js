@@ -1,23 +1,23 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "dece1e959c2bf14088676e8975b4714a",
+    "revision": "7acd310f5ad66c22011728cb874ec8d8",
     "url": "/Flight_tracker/index.html"
   },
   {
-    "revision": "bd3c5d283e50ae14e16f",
+    "revision": "0b5234ce59164eb4a81e",
     "url": "/Flight_tracker/static/css/main.5ecd60fb.chunk.css"
   },
   {
-    "revision": "d563d8e538104f16a2ee",
-    "url": "/Flight_tracker/static/js/2.2b2f537b.chunk.js"
+    "revision": "b1876b69d3538d336fb8",
+    "url": "/Flight_tracker/static/js/2.fb95e0d5.chunk.js"
   },
   {
     "revision": "3453b8997016469371284a28c0e873e2",
-    "url": "/Flight_tracker/static/js/2.2b2f537b.chunk.js.LICENSE.txt"
+    "url": "/Flight_tracker/static/js/2.fb95e0d5.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "bd3c5d283e50ae14e16f",
-    "url": "/Flight_tracker/static/js/main.73181803.chunk.js"
+    "revision": "0b5234ce59164eb4a81e",
+    "url": "/Flight_tracker/static/js/main.0da3f298.chunk.js"
   },
   {
     "revision": "c351e60a3e7f5ba35b06",
